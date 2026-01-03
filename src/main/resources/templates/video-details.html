@@ -64,7 +64,7 @@
                     <div>
                         <h3 class="font-bold mb-2"><i class="bi bi-tags text-blue-500"></i> Tags</h3>
                         <div th:if="${videoDetails.tags.size() > 0}">
-                                <span th:each="tag : ${videoDetails.tags}" class="tag inline-flex items-center px-3 py-2 mr-2 mb-2 text-sm">
+                                <span th:each="tag : ${videoDetails.tags}" class="tag inline-flex items-center gap-2 rounded-full px-3 py-2 mr-2 mb-2 text-sm">
                                     <i class="bi bi-hash"></i> <span th:text="${tag}"></span>
                                 </span>
                         </div>
