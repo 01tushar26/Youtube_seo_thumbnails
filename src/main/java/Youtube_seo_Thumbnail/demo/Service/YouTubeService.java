@@ -1,5 +1,7 @@
 package Youtube_seo_Thumbnail.demo.Service;
 
+import Youtube_seo_Thumbnail.demo.DTO.Video.Thumbnail;
+import Youtube_seo_Thumbnail.demo.DTO.Video.Thumbnails;
 import Youtube_seo_Thumbnail.demo.Entity.SearchVideo;
 import Youtube_seo_Thumbnail.demo.Entity.Video;
 import Youtube_seo_Thumbnail.demo.Entity.VideoDetails;
@@ -16,6 +18,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class YouTubeService {
+
 
     public final WebClient.Builder webclientBuilder;
 
@@ -153,12 +156,8 @@ public class YouTubeService {
      static class SearchItem {
         private Id id;
     }
-    @Data
-    static class Thumbnail {
-        private String url;
-        private int width;
-        private int height;
-    }
+
+
 
     @Data
      static class Id {
@@ -183,19 +182,6 @@ public class YouTubeService {
         private List<String> tags;
         private Thumbnails thumbnails;
     }
-    @Data
-    static class Thumbnails {
-        private Thumbnail maxres;
-        private Thumbnail high;
-        private Thumbnail medium;
-        private Thumbnail _default;
 
-        String getBestThumbnailUrl() {
-            if (maxres != null) return maxres.getUrl();
-            if (high != null) return high.getUrl();
-            if (medium != null) return medium.getUrl();
-            return _default != null ? _default.getUrl() : "";
-        }
-    }
 
 }
