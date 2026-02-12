@@ -16,4 +16,4 @@ RUN ./mvnw clean package -DskipTests
 EXPOSE 8080
 
 # Run the jar
-CMD ["java", "-jar", "target/youtube_seo_thumbnail-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/demo-0.0.1-SNAPSHOT.jar"]
