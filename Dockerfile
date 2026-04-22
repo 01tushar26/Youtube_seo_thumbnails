@@ -7,12 +7,12 @@ WORKDIR /app
 # Copy project files
 COPY . .
 
-# RUN chmod +x mvnw
-#
-# # Build the application
-# RUN ./mvnw clean package -DskipTests
+RUN chmod +x mvnw
 
-# Expose port (Render uses PORT internally)
+# Build the application
+RUN ./mvnw clean package -DskipTests
+
+Expose port (Render uses PORT internally)
 EXPOSE 8080
 
 # Run the jar
