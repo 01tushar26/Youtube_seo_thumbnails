@@ -1,3 +1,4 @@
+
 # Use Java 17 (recommended for Spring Boot)
 FROM eclipse-temurin:21-jdk-alpine
 
@@ -12,7 +13,7 @@ RUN chmod +x mvnw
 # Build the application
 RUN ./mvnw clean package -DskipTests
 
-Expose port (Render uses PORT internally)
+# Expose port (Render uses PORT internally)
 EXPOSE 8080
 
 # Run the jar
